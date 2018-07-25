@@ -9,7 +9,13 @@
 }
 
 .bg-primary{
+ background-image: url(../img/17ccaboverde.jpg);
  background-color: #6897BB;
+}
+
+.text-center{
+  background-color: #343a40;
+  opacity: 0.75;
 }
 
 header {
@@ -27,4 +33,17 @@ header {
 section {
   padding: 150px 0;
 }
+
+ table {
+      width: 100%;
+    }
+		table,
+		th {
+			text-align: center;
+		}
+		/*make odd rows lightblue*/
+		.table-striped > tbody > tr:nth-child(odd) > td {
+			background-color: #f4f7ff;
+		}
+
 }
