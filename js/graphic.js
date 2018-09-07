@@ -2,21 +2,23 @@
 
 //enter google sheets key here
 var key =
-  "https://docs.google.com/spreadsheets/d/113QZOTS9JQ1WGfwjwQrOpErUBJTAnaBmdjP0_OjA53c/pubhtml?gid=489792061&single=true";
+  "1HoiUQRQQqYXcvXejREg56GKplyedYgvsyB8N_rrwcp4";
 
 //"data" refers to the column name with no spaces and no capitals
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
-var columns = [{
-  "data": "company",
-  "title": "Company"
-}, {
-  "data": "violations",
-  "title": "Claims"
-}, {
-  "data": "total-award",
-  "title": "Total Awarded"
-}];
+var columns = [
+  {"data": "creators","title": "Creator(s)"}, 
+  {"data": "project-title","title": "Project Title"}, 
+  {"data": "project-url","title": "Project URL"},
+  {"data": "institution","title": "Institution"},
+  {"data": "institution-type", "title": "Institution Type"},
+  {"data": "project-type", "title":"Project Type"},
+  {"data": "date", "title":"Date"},
+  {"data": "subjects", "title":"Subjects"},
+  {"data": "funders","title":"Funders"} 
+];
+
 
 $(document).ready(function() {
 
@@ -37,12 +39,12 @@ $(document).ready(function() {
     //select main div and put a table there
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
     $('#graphic').html(
-      '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
+      '<table cellpadding="0" cellspacing="0" border="0" class="table table-responsive table-bordered table-hover" id="mySelection"></table>'
     );
 
     //initialize the DataTable object and put settings in
     $("#mySelection").DataTable({
-      "autoWidth": false,
+      "autoWidth": true,
       "data": data,
       "columns": columns,
       "order": [

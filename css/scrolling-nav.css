@@ -23,7 +23,28 @@ header {
   font-family: Georgia;
 }
 
+ .table {
+      width: 50%;
+    }
+		table,
+		th {
+			text-align: center;
+		}
+		/*make odd rows lightblue*/
+		.table-striped > tbody > tr:nth-child(odd) > td {
+			background-color: #6897BB;
+		}
+ 
+footer {
+    font-family: Georgia;
+    font-size: 10px;
+  }
+ 
+footer a
 
+{ 
+color: grey;
+}
 
 @media (min-width: 992px) {
   header {
