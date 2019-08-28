@@ -1,1 +1,5 @@
 node_modules.DS_Store
+
+# skip npm installs
+node_modules
+node_modules/*
